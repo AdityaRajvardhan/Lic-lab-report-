@@ -30,7 +30,7 @@ Step 2:  Place the following components in the schematic-MOSFET (CMOSN or NMOS 1
 Step 3: Set Component values DC supply (V1) = 1.8V (connect to drain through R1).AC input source V2 = SINE(0.9 50m 1k) (0.9V DC bias, 50mV AC signal, 1kHz frequency).Resistor (R1) = 1kΩ (between V1 and drain). MOSFET (M1) = 180nm NMOS model (drain connected to R1, source connected to ground, gate connected to V2).
 Import MOSFET s(CMOS) datsheet which contains threshold and other specifications of mosfet 
 Step 4: Configure simulation click on simulation then edit Simulation Cmd and enter the following:
-
+ 
 DC Analysis:  .op to find DC operating point.
 
 AC Analysis: .ac dec 20 0.1 1T to analyze gain and frequency response.
@@ -43,7 +43,28 @@ Step 6: Interpret The results for DC analysis, check VGS, VDS, and ID to confirm
 ## Cicuit diagram 
 ![image](https://github.com/user-attachments/assets/291fa2e6-a13d-4b07-ad03-c733cfa0de56)
 
+## Results
+## Inference
+
+Biasing and MOSFET Operation: Proper biasing is absolutely essential to ensure that the MOSFET works in saturation territory acting as an amplifier.The DC operating point or the Q-point decides the way in which the amplifier will perform, and for this, it has to be set properly so as to produce the required amplification effect.
+
+Effect of Width (𝑊) and Length (L) on  ID​:With an increase in width (W), increase in drain current ID​, hence an induction of higher amplification.The channel length (L) maintains a steady value 180nm meaning that adjustment of W must be performed to achieve the required ID​.
+
+Dependency of Power and Current:Power (=50μW) requirement sets out what drain current must yield (𝐼𝐷=27.78𝜇𝐴I D​ =27.78μA) which again has been proven through simulation via SPICE.The value for W was established via a trial-and-error method experimentally on LTspice.
+
+Observation of AC Analysis:Gain (𝐴V ) and frequency response of an amplifier are all dependent on parameters of MOSFET and external resistances.
+
+Transient Response and Time-Domain Behavior:The amplifier does carry out amplifying of the input signal, as was observed in transient analysis.Any output signal distortions would represent improper biasing or non-linearity on the part of the MOSFET actually doing its work.
+
+# Circuit 2 
 
 
+## Working 
+
+A CMOS inverter (Common Source with Active Load) is depicted in this circuit. Together, NMOS (M1) and PMOS (M2) transistors enhance the input signal. The active load (pull-up network) is the PMOS transistor, and the pull-down network is the NMOS transistor. The output is pulled low by the NMOS when the input voltage is high and high by the PMOS when the input voltage is low. Because of its excellent efficiency and gain, this arrangement is frequently  amplifier circuits.
+
+ 
+ 
+​ 
 
 
