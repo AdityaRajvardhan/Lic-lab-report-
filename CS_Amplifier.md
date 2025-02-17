@@ -29,12 +29,11 @@ Step 2:  Place the following components in the schematic-MOSFET (CMOSN or NMOS 1
 
 Step 3: Set Component values DC supply (V1) = 1.8V (connect to drain through R1).AC input source V2 = SINE(0.9 50m 1k) (0.9V DC bias, 50mV AC signal, 1kHz frequency).Resistor (R1) = 1kΩ (between V1 and drain). MOSFET (M1) = 180nm NMOS model (drain connected to R1, source connected to ground, gate connected to V2).
 Import MOSFET s(CMOS) datsheet which contains threshold and other specifications of mosfet 
+
 Step 4: Configure simulation click on simulation then edit Simulation Cmd and enter the following:
  
 DC Analysis:  .op to find DC operating point.
-
 AC Analysis: .ac dec 20 0.1 1T to analyze gain and frequency response.
-
 Transient Analysis: .tran 5m to observe the output waveform over time. Place these commands in the schematic.
 
 Step 5: Run SimulationClick Run (green 'Play' button).View results in waveform viewer. Observing DC bias values, gain vs frequency response, and time-domain output waveform.
@@ -45,6 +44,24 @@ Step 6: Interpret The results for DC analysis, check VGS, VDS, and ID to confirm
 
 
 ## Results
+### DC Anaylsis 
+
+![WhatsApp Image 2025-02-17 at 23 19 46_6860a384](https://github.com/user-attachments/assets/09644bba-88c7-4fde-a0d3-acd88e8e152d)
+
+Id=27.7uA
+Vout=1.772V
+Width=1.018u
+DC Operating point : (1.772V,27.7uA ) is obtained for 1.018um Width and 180nm Length.
+###  AC anaylsis
+![WhatsApp Image 2025-02-17 at 22 26 02_2ac3de70](https://github.com/user-attachments/assets/9e8a12bc-92d8-47e8-a7a4-801f2adbbb35)
+
+Gain=
+
+### Transient Anaylsis
+![image](https://github.com/user-attachments/assets/38ca7b3d-96d3-4645-8ad0-326c43517c1a)
+
+We can see Phase shift of 180 degree between input and output.
+
 ## Inference
 
 Biasing and MOSFET Operation: Proper biasing is absolutely essential to ensure that the MOSFET works in saturation territory acting as an amplifier.The DC operating point or the Q-point decides the way in which the amplifier will perform, and for this, it has to be set properly so as to produce the required amplification effect.
@@ -58,7 +75,8 @@ Observation of AC Analysis:Gain (𝐴V ) and frequency response of an amplifier
 Transient Response and Time-Domain Behavior:The amplifier does carry out amplifying of the input signal, as was observed in transient analysis.Any output signal distortions would represent improper biasing or non-linearity on the part of the MOSFET actually doing its work.
 
 # Circuit 2 
-![image](https://github.com/user-attachments/assets/89527844-6c30-404d-b328-2e10ebeaf63e)
+ ![image](https://github.com/user-attachments/assets/42ba0246-077d-4bcb-9ec8-3beff07a0bca)
+
 
 
 ## Working 
@@ -73,6 +91,27 @@ Ac gain can be calulated using equation Av = -gm *Rd
 
 ## Transient analysis
 Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. This helps visualize how the circuit responds to different waveforms such as sine waves or pulses. In LTspice, the transient analysis is done by means of the .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
+
+## Inference: 
+
+1.DC Analysis- Determines the quiescent operating point and ensures the NMOS operates in the saturation region for proper amplification.  
+
+
+2.AC Analysis- Examines the small-signal gain of the amplifier. The PMOS active load increases output impedance, leading to improved voltage gain.  
+
+
+3.Transient Analysis-Validates the amplifier’s response to a time-varying signal. Confirms signal amplification and phase inversion, which is a characteristic of a common source amplifier.  
+
+
+4.Frequency Response -Identifies bandwidth limitations and cut-off frequencies. Ensures the amplifier functions correctly across the required frequency range.  
+
+
+
+
+   
+ 
+
+
 
 
  
