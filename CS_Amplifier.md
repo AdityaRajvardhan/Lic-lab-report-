@@ -2,7 +2,7 @@
 ## Aim
 To Simulate a CS amplifier in LTspice to analyze how MOSFET channel length (L) and width (W) impact channel lenght modulation and DC bias, AC gain, and transient response.
 ## Components Required
-N channel MOSFET(nmos4),P channel MOSFET(pmos4), Resistor (1kΩ), DC Power supply of  1.8V,0.9v, Wires.
+N channel MOSFET(nmos4),P channel MOSFET(pmos4), Resistor (1kΩ), DC Power supply of  1.8V,0.6v, Wires.
 ## Theory
 A Common Source (CS) amplifier is a basic MOSFET amplifier configuration used for voltage amplification. It is commonly used in the architecture of analog circuits as minimum with simple construction.A method of operationThe input signal is applied to the gate of the MOSFET.The output across the drain terminal.The source iscommon with GND and geared towards the common threshold for input and output signals.A drain resistor (R1) is used to develop an output voltage.AC signal (V2),applied to the gate, modulates the drain current and gives amplified output.
 Relevant observations
@@ -42,6 +42,26 @@ Step 6: Interpret The results for DC analysis, check VGS, VDS, and ID to confirm
 ## Cicuit diagram 
 ![WhatsApp Image 2025-02-17 at 20 46 47_55ddfa41](https://github.com/user-attachments/assets/6c378108-4265-4867-968f-ebf6dddb8aa2)
 
+## Calculation
+
+
+
+
+P = VDD * ID
+
+ID = P/VDD
+
+ID = 50μW / 1.8V
+ID = 27.7μA
+Channel Length (L) = 180nm.
+
+Supply Voltage (Vdd) = 1.8V.
+
+Gate Voltage (Vg) = 0.6V.
+
+Power Budget = 50μW.
+
+Drain Current (Id) = 27.7μA.
 
 ## Results
 ### DC Anaylsis 
@@ -53,9 +73,10 @@ Vout=1.772V
 Width=1.018u
 DC Operating point : (1.772V,27.7uA ) is obtained for 1.018um Width and 180nm Length.
 ###  AC anaylsis
-![WhatsApp Image 2025-02-17 at 22 26 02_2ac3de70](https://github.com/user-attachments/assets/9e8a12bc-92d8-47e8-a7a4-801f2adbbb35)
+![WhatsApp Image 2025-02-17 at 23 50 12_e50229db](https://github.com/user-attachments/assets/591e551a-4e3c-41a5-b350-f5130c6759c4)
 
-Gain=
+
+Gain= -3db
 
 ### Transient Anaylsis
 ![image](https://github.com/user-attachments/assets/38ca7b3d-96d3-4645-8ad0-326c43517c1a)
