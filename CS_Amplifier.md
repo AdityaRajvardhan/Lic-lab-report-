@@ -41,7 +41,8 @@ Step 5: Run SimulationClick Run (green 'Play' button).View results in waveform v
 
 Step 6: Interpret The results for DC analysis, check VGS, VDS, and ID to confirm the MOSFET is operating. For AC analysis, check the gain plot and bandwidth.Respectively for transient analysis, observe the shape of the output waveform and check that amplification took place.
 ## Cicuit diagram 
-![image](https://github.com/user-attachments/assets/291fa2e6-a13d-4b07-ad03-c733cfa0de56)
+![WhatsApp Image 2025-02-17 at 20 46 47_55ddfa41](https://github.com/user-attachments/assets/6c378108-4265-4867-968f-ebf6dddb8aa2)
+
 
 ## Results
 ## Inference
