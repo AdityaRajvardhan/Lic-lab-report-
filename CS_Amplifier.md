@@ -104,6 +104,8 @@ Transient Response and Time-Domain Behavior:The amplifier does carry out amplify
 ## Working 
 
 A CMOS inverter (Common Source with Active Load) is depicted in this circuit. Together, NMOS (M1) and PMOS (M2) transistors enhance the input signal. The active load (pull-up network) is the PMOS transistor, and the pull-down network is the NMOS transistor. The output is pulled low by the NMOS when the input voltage is high and high by the PMOS when the input voltage is low. Because of its excellent efficiency and gain, this arrangement is frequently  amplifier circuits.
+Length - 180nm
+
 ## Result and analysis
 ## Different types of analysis
 ### DC Analysis
