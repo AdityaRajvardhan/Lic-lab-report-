@@ -104,32 +104,29 @@ Transient Response and Time-Domain Behavior:The amplifier does carry out amplify
 ## Working 
 
 A CMOS inverter (Common Source with Active Load) is depicted in this circuit. Together, NMOS (M1) and PMOS (M2) transistors enhance the input signal. The active load (pull-up network) is the PMOS transistor, and the pull-down network is the NMOS transistor. The output is pulled low by the NMOS when the input voltage is high and high by the PMOS when the input voltage is low. Because of its excellent efficiency and gain, this arrangement is frequently  amplifier circuits.
+## Result and analysis
 ## Different types of analysis
-## DC Analysis
+### DC Analysis
 DC analysis means to find the operational point (bias point) MOSFET by calculating some different DC voltages and currents at various nodes of the circuit. For a common source amplifier, we should find the drain current (ID), gate-source voltage (VGS), and check whether the MOSFET is working in cut-off, triode, or saturation regions. It is important to perform the DC analysis since this sets the amplifier for the correct operational bias state before applying an AC signal. In LTspice, the DC analysis is performed using the .op command.
 ![Screenshot 2025-02-18 153133](https://github.com/user-attachments/assets/ce2b14bb-74ce-4dde-9387-c5e48b159f7d)
 
-## AC analysis 
+### AC analysis 
 AC analysis depicts how the amplifier's gain (𝐴𝑣A v​ ) changes with frequency as it is a critical way of studying the frequency response of the amplifier. It also identifies the bandwidth, the -3dB cutoff frequency, and how the amplifier behaves at different frequencies. AC analysis also assumes that there will be small-signal operation; thus, the MOSFET behavior will have to be linearized around its bias point. AC analysis is done in LTspice using the .ac dec 20 0.1 1T command, which sweeps the frequency from 0.1 Hz to 1 THz.
 Ac gain can be calulated using equation Av = -gm *Rd
+
+DC Offset: 0.9V
+Amplitude: 50mV 
+
 ![image](https://github.com/user-attachments/assets/0c3b9e92-de45-427c-926b-557c2637ade9)
 
 
 
-## Transient analysis
+### Transient analysis
 Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. This helps visualize how the circuit responds to different waveforms such as sine waves or pulses. In LTspice, the transient analysis is done by means of the .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
-![Uploading image.png…]()
 
+![image](https://github.com/user-attachments/assets/dd0c2e8b-df46-4ece-8741-5ccb7c547b0d)
 
-
-## DC sweep
-
-
-![Screenshot 2025-02-18 154231](https://github.com/user-attachments/assets/024136f6-05e4-4413-a93a-3b398e5e8525)
-
-
-
-## Inference: 
+### Inference: 
 
 1.DC Analysis- Determines the quiescent operating point and ensures the NMOS operates in the saturation region for proper amplification.  
 
