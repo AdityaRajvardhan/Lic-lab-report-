@@ -10,6 +10,10 @@ N channel MOSFET(nmos4),Resistors-1.145kohm(2) ,327.8kohm, Power supply , Connec
 
 A differential amplifier is an electronic circuit that amplifies the difference between two input voltages while rejecting any common signals. It is a fundamental part of many analog circuits, particularly operational amplifiers and instrumentation amplifiers.
 
+![image](https://github.com/user-attachments/assets/709e0b03-fb58-4212-ba6c-cd3ee333a56c)
+
+The basic MOS differential-pair configuration.
+
 A differential amplifier amplifies the difference between two input signals (V₁ and V₂) while rejecting common signals (noise).
 
 If V₁ > V₂, the output is positive.
@@ -52,11 +56,160 @@ Step 6: Analyze DC biasing, gain vs frequency, and transient response.
  
 ![WhatsApp Image 2025-02-28 at 20 29 36_9bf578f2](https://github.com/user-attachments/assets/a118b6b6-4276-4794-a310-f4d88b9442cd)
 
-##  Resukts 
+##  Results 
 ### DC Analysis
-### AC Analysis
+To do circit analysis first we need to check that the Both the MOSFET should be in the Saturation Region which should satisfy this;
+
+VDS > VGS - Vth
+![image](https://github.com/user-attachments/assets/26731324-ba67-479e-804b-d4ad1d4a568d)
+Lenght:200n 
+
+Width:120.48u
+
+The above length and width helps Mosfet to run in saturation region 
+
 ### Transient Analysis 
 
+Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
 
+
+![image](https://github.com/user-attachments/assets/ff118670-c278-4b2a-8fe2-563c625e3039)
+We can see Phase shift of 180 degree between input and output.
+
+Green line represents Vout and blue line represends Vicm 
+Av = Vout/Vin
+
+   = 1.72-1.027/1-0.99
+
+   = 0.145/0.1
+
+ Av = 1.45
+
+
+### AC Analysis
+The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
+
+![image](https://github.com/user-attachments/assets/97102a1c-3f03-4bfd-8bc9-2399891c3d64)
+
+
+Av=1.203 
+
+Gain=20log(Av)
+
+    =20 log(1.203)
+
+    =1.605
+ 
+By calculating from graph we can say Therotical nad experiment value of mid band frequency is approximatly equal.
+
+## DC sweep 
+
+![image](https://github.com/user-attachments/assets/c8675df4-9f30-4952-abe9-5da53982b9c1)
+
+\
+The crossover voltage (where Vocm1 = Vocm2) represents the bias point at which both transistors conduct symmetrically.
+
+The linear variation of the output voltages indicates proper biasing of the NMOS transistors.
+
+## Circuit 2
+
+In this circuit we will be replacing Rss with current source and other terminal to ground.
+Current source of 1.22
+![image](https://github.com/user-attachments/assets/5143f461-5812-40f0-81ab-32c78d605fe2)
+
+## Dc Analysis 
+To do circit analysis first we need to check that the Both the MOSFET should be in the Saturation Region which should satisfy this;
+
+VDS > VGS - Vth
+![image](https://github.com/user-attachments/assets/beb58d08-9b31-4e22-b5b3-abaa82105a6b)
+
+Lenght:200n 
+
+Width:120.48u
+
+The above length and width helps Mosfet to run in saturation region 
+
+## Transient Analysis 
+Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
+
+![image](https://github.com/user-attachments/assets/ac383264-8928-4fc2-929b-a2415b690fc2)
+
+Av = Vout/Vin
+
+   = 1.5369-0.6623/1-0.9
+   = 0.8746/0.1
+Av = 8.74
+
+## AC Analysis 
+
+The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
+ 
+![image](https://github.com/user-attachments/assets/9db5e817-b7b6-4cb4-9f1f-76dc034287cd)
+
+If the drain resistors were increased, the output voltage swing would be greater, leading to a steeper slope.
+Decrease in resistance would reduce the voltage gain, making the curves less steep.
+
+This happend because Resistance Rss was directly replaced with current source leading to increase in resistance and hence gain is increased. 
+
+Av=2.877( Taken from the e
+
+Gain=20log(Av)
+
+    =20 log(2.877)
+
+    = 9.178
+
+## DC sweep 
+
+![image](https://github.com/user-attachments/assets/8043d826-8c54-480d-a053-678183360fe8)
+
+Observations from first circuit 's DC sweep to  differential MOS with current source 
+
+There is shift in Crossover Point that is  intersection occurs at a different voltage.
+
+There is change in Slope as The rate of voltage variation is different.
+
+If the drain resistors were increased, the output voltage swing would be greater, leading to a steeper slope.
+Decrease in resistance would reduce the voltage gain, making the curves less steep.This happend because Resistance Rss was directly replaced with current source leading to increase in resistance and hence gain  
+
+## Circuit 3 
+
+Differential amplifier circuit, with NMOS M3 acting as current source
+
+![image](https://github.com/user-attachments/assets/8eddb515-224f-456d-89d0-80d3648328a4)
+
+By varying V1 values and keeping Mosfet in saturation region as per calculations we can obtain operating points.
+V1 for the M3 is 0.5725 V, which will give us I of 1.222 mA, VD3 of around 0.414 V, which is not exactly the Vp we need but is close.
+
+## Dc analysis 
+To do circit analysis first we need to check that the Both the MOSFET should be in the Saturation Region which should satisfy this;
+
+VDS > VGS - Vth
+
+![WhatsApp Image 2025-03-06 at 00 14 35_65062030](https://github.com/user-attachments/assets/73c96e0a-ec9d-4b8e-b3ac-d1e3ce13bbfe)
+
+Lenght:180n 
+
+Width:125u
+
+The above length and width helps Mosfet to run in saturation region 
+
+
+## Transient Analysis
+
+Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
+
+
+![image](https://github.com/user-attachments/assets/54954622-2413-426a-a22f-c734a64d8073)
+
+## AC Analysis
+
+The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
+
+![image](https://github.com/user-attachments/assets/b93bcac8-549c-4383-9e0f-72a43ee5a16f)
+
+
+
+## Inference 
 
 
