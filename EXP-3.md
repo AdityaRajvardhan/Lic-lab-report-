@@ -62,6 +62,7 @@ To do circit analysis first we need to check that the Both the MOSFET should be 
 
 VDS > VGS - Vth
 ![image](https://github.com/user-attachments/assets/26731324-ba67-479e-804b-d4ad1d4a568d)
+
 Lenght:200n 
 
 Width:120.48u
@@ -237,14 +238,28 @@ Transient analysis has been performed to track how the output voltage waveform c
 
 The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
 
-![image](https://github.com/user-attachments/assets/e9762988-bc8f-418d-840c-cf5896f7a909)
+![WhatsApp Image 2025-03-06 at 13 52 53_c2cdb53e](https://github.com/user-attachments/assets/2a8c690e-571f-4c06-b542-82f93f0d693d)
 
+Av = 10.33
 
+Gain in dB = 20.282 
 
 
 ## Inference 
 
+DC Analysis:
+All three circuits have nearly identical operating points (around 1.1V, 0.611mA), indicating that the NMOSFETs are biased similarly, ensuring they operate in the saturation region for amplification.
 
+Transient Analysis :
+
+Circuit 1 has the lowest gain, which means it cannot effectively provide amplification.
+Circuit 2 has moderate gain, but the huge difference between AC values and transient indicates very strong frequency-dependent...
+Circuit 3 has the highest gain; hence, it is the best amplifier of the three. 
+
+AC analysis:
+ The first circuit is found to have the lowest gain, confirming it to be a poor amplifier. A large reduction in gain, compared with the transient analysis, is seen in circuit two. this indicates frequency-dependent losses. Circuit three exhibits a consistently higher gain, attributable to a suitable design that involves minimal frequency-dependent degradation. 
+
+As the drain resistance increases, the gain generally increases because a higher drain resistance allows more voltage to develop across it for a given current, leading to a stronger output signal
 
 
 
