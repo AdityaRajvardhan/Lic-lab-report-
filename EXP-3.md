@@ -1,9 +1,10 @@
 ## Aim
 Design and analyse the MOS differential amplifier circuit by performing DC analysis, Transient analysis, Frequency response for the following specifications 
 
-Vdd=1.8v , P<=2.2mW , Vicm=0.95v , Vocm=1.1v,Vp=0.4v
+Vdd=1.8v , P<=2.2mW , Vicm=0.95v , Vocm=1.1v,Vp=0.4vhttps://github.com/AdityaRajvardhan/Lic-lab-report-/blob/main/EXP-3.md
 
 ## Components  Required
+
 N channel MOSFET(nmos4),Resistors-1.145kohm(2) ,327.8kohm, Power supply , Connecting wires.
 
 ## Theory 
