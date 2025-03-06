@@ -65,6 +65,10 @@ VDS > VGS - Vth
 Lenght:200n 
 
 Width:120.48u
+                       
+   Id1 = Id2 => 0.611mA , Vocm1 = Vocm2 -> 1.1V 
+
+                          Operating point of NMOSFETS = (1.1 V, 0.611mA)
 
 The above length and width helps Mosfet to run in saturation region 
 
@@ -85,6 +89,11 @@ Av = Vout/Vin
 
  Av = 1.45
 
+Gain in db=20log(1.45)
+       
+          =3.227 dB
+
+
 
 ### AC Analysis
 The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
@@ -97,7 +106,7 @@ Av=1.203
 Gain=20log(Av)
 
     =20 log(1.203)
-
+   
     =1.605
  
 By calculating from graph we can say Therotical nad experiment value of mid band frequency is approximatly equal.
@@ -106,7 +115,7 @@ By calculating from graph we can say Therotical nad experiment value of mid band
 
 ![image](https://github.com/user-attachments/assets/c8675df4-9f30-4952-abe9-5da53982b9c1)
 
-\
+
 The crossover voltage (where Vocm1 = Vocm2) represents the bias point at which both transistors conduct symmetrically.
 
 The linear variation of the output voltages indicates proper biasing of the NMOS transistors.
@@ -121,11 +130,16 @@ Current source of 1.22
 To do circit analysis first we need to check that the Both the MOSFET should be in the Saturation Region which should satisfy this;
 
 VDS > VGS - Vth
+
 ![image](https://github.com/user-attachments/assets/beb58d08-9b31-4e22-b5b3-abaa82105a6b)
 
 Lenght:200n 
 
 Width:120.48u
+
+ Id1 = Id2 => 0.611mA , Vocm1 = Vocm2 -> 1.1V 
+
+                          Operating point of NMOSFETS = (1.1 V, 0.611mA)
 
 The above length and width helps Mosfet to run in saturation region 
 
@@ -140,6 +154,9 @@ Av = Vout/Vin
    = 0.8746/0.1
 Av = 8.74
 
+Gain in dB=20log(8.74)
+          = 18.830 dB
+
 ## AC Analysis 
 
 The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
@@ -151,12 +168,12 @@ Decrease in resistance would reduce the voltage gain, making the curves less ste
 
 This happend because Resistance Rss was directly replaced with current source leading to increase in resistance and hence gain is increased. 
 
-Av=2.877( Taken from the e
+Av=2.877
 
 Gain=20log(Av)
 
     =20 log(2.877)
-
+    
     = 9.178
 
 ## DC sweep 
@@ -192,6 +209,9 @@ Lenght:180n
 
 Width:125u
 
+ Id1 = Id2 => 0.6113mA , Vocm1 = Vocm2 -> 1.10026V 
+
+                          Operating point of NMOSFETS = (1.10026 V, 0.6113mA)
 The above length and width helps Mosfet to run in saturation region 
 
 
@@ -200,16 +220,32 @@ The above length and width helps Mosfet to run in saturation region
 Transient analysis has been performed to track how the output voltage waveform changes over time with the applied AC input signal. This analysis is further employed to see how amplifiers affect the real-time behavior, including signal amplification and the distortions involved. .tran 5 m command to run the simulation for 5 milliseconds and observe a real-time description of the circuit's activity.
 
 
-![image](https://github.com/user-attachments/assets/54954622-2413-426a-a22f-c734a64d8073)
+![WhatsApp Image 2025-03-06 at 13 18 24_68198a9d](https://github.com/user-attachments/assets/af817e07-82e6-4548-85f2-63e02612d01d)
+
+ Voltage Gain = Vo/Vi 
+
+              =1.53566-0.006606/0.1
+
+              =15.29054 V/V 
+
+ Gain in dB = 20log(15.29) 
+
+            = 23.6 dB
+
 
 ## AC Analysis
 
 The AC analysis plot shows the frequency response of the circuit, where the gain remains stable in the mid-frequency range before rolling off at higher frequencies. The mid-band region exhibits a nearly constant gain, indicating the circuit's operational bandwidth, while the high-frequency roll-off suggests the presence of dominant poles limiting the bandwidth.
 
-![image](https://github.com/user-attachments/assets/b93bcac8-549c-4383-9e0f-72a43ee5a16f)
+![image](https://github.com/user-attachments/assets/e9762988-bc8f-418d-840c-cf5896f7a909)
+
 
 
 
 ## Inference 
+
+
+
+
 
 
