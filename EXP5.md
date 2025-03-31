@@ -28,7 +28,17 @@ Current sources -delivering fixed current to other parts of a circuit.
 
 ## DESIGN CIRCUIT
 
-![1FIG](https://github.com/user-attachments/assets/0a4a8043-a413-41c1-899d-dff358e8f778)
+![1AFIG](https://github.com/user-attachments/assets/9f7b3f4f-268e-4d90-bc7a-839352f23909)
+
+
+## DC ANALYSIS 
+
+
+
+## TRANSIENT ANALYSIS  
+
+## AC ANALYSIS 
+
 
 
 
