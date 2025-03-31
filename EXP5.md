@@ -65,6 +65,13 @@ M3- L=1um ,W=20um
 
 ![1a](https://github.com/user-attachments/assets/94cb1f83-5359-46b2-809a-73b0d7090169)
 
+Gain = Vout/Vin
+     = 280/20.4
+     = 13.72
+
+Gain in dB= 20 log(13.72)
+          = 22.74
+
 ## AC ANALYSIS 
 
 ![1a5point175Ghz](https://github.com/user-attachments/assets/a3f5fa0b-ac70-42f1-886e-63c5fcd7bae4)
