@@ -74,7 +74,12 @@ Gain in dB= 20 log(13.72)
 
 ## AC ANALYSIS 
 
-![1a5point175Ghz](https://github.com/user-attachments/assets/a3f5fa0b-ac70-42f1-886e-63c5fcd7bae4)
+![ac1point061Ghz](https://github.com/user-attachments/assets/63148229-75aa-4324-9b21-97e03f6a50b8)
+
+Frequency = 1.061MHz
+
+Gain in db = 21.008 
+
 
 
 
