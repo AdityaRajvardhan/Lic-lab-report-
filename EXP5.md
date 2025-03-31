@@ -25,3 +25,10 @@ Biasing circuits -providing stable currents in amplifiers.
 Active loads -replacing resistors in ICs for better performance.
 
 Current sources -delivering fixed current to other parts of a circuit.
+
+## DESIGN CIRCUIT
+
+![1FIG](https://github.com/user-attachments/assets/0a4a8043-a413-41c1-899d-dff358e8f778)
+
+
+
