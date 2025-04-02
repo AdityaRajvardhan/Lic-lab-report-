@@ -31,6 +31,21 @@ Current sources -delivering fixed current to other parts of a circuit.
 ![1fig](https://github.com/user-attachments/assets/e2e2e156-19a1-4ce3-92c8-fb87951aa6f6)
 
 
+-  The MOSFET should be in saturation region 
+<table>
+<td>V1>V<sub>th</sub></td>
+</table>
+i.e 0.5>0.366
+ 
+  -  I<sub>taotal</sub>=P/V<sub>dd</sub>
+<table>
+<td>I<sub>total</sub>=0.55mA</td>
+</table>
+I<sub>total</sub>=I<sub>ref</sub> + I<sub>p</sub>
+I<sub>ref</sub>=I<sub>p</sub>=(I<sub>total</sub>)/2
+<table>
+<td>I<sub>ref</sub>=I<sub>p</sub>=0.27mA</td>
+</table>
 
 ## DC ANALYSIS 
 
@@ -59,6 +74,15 @@ M3- L=1um ,W=20um
 
 ![1c)](https://github.com/user-attachments/assets/d13c3db6-c4b0-40f0-a126-f9a6829f12fb)
 
+# Special Case: W/L Ratio of M1:M2 = 1:2
+
+![image](https://github.com/user-attachments/assets/a901904e-5078-425d-8d1d-691adea231b3)
+
+M1:M2=1:2
+
+L=2.38:4.76um ,W=180nm
+
+W/L ratio of M1 and M2 transistors are maintained same i,e 1:2 .
 
 
 ## TRANSIENT ANALYSIS  
