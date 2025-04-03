@@ -104,6 +104,48 @@ Frequency = 1.061MHz
 
 Gain in db = 21.008 
 
+## CIRCUIT 2 
+
+![image](https://github.com/user-attachments/assets/d409faa5-8726-445e-92c8-8f806c60225d)
 
 
+## DC ANALYSIS
 
+ ![image](https://github.com/user-attachments/assets/9c676fc9-7129-4922-8be0-ef8ca60c8efc)
+
+ We can observe that current accross M6 and M3 transistors are almost double because of 1:2 W/L ratio and that of current accross M5 and M4 transistors are same because of 1:1 W/L ratio.
+
+
+## TRANSIENT ANALYSIS
+
+![image](https://github.com/user-attachments/assets/d9e93798-cde9-4259-b274-6f6272fa0c7f)
+
+Gain= Vout/Vin
+    = 1.53/0.099
+    = 15.5
+
+Gain in db= 20log(15.5)
+          =23.8
+
+## AC ANALYSIS 
+
+![image](https://github.com/user-attachments/assets/3a710b61-386f-4296-8aea-a6438bbc1d2e)
+
+BW= 1.94GHz 
+
+## INFERENCE 
+
+- **Length Increase**: When the length of the NMOSFET is increased, keeping the W/L ratio constant:
+  - **V<sub>out</sub>** decreases.
+  - **Drain current (I<sub>D</sub>)** increases slightly.
+  - **Output resistance** increases due to reduced channel-length modulation.
+  - Longer **L** improves **current matching** and **stability** in the current mirror.
+
+- The **differential amplifier** performs better with a **current mirror** instead of a resistor load.
+- Using **current mirrors** enhances the **gain and stability** of the amplifier and **reduces offset variations**.
+
+Current Accuracy:The 1:1 ratio offers superior current matching.
+
+The 1:2 ratio results in higher power consumption due to larger devices.
+
+The 1:1 ratio provides better stability due to higher output resistance.
